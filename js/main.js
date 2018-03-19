@@ -1,10 +1,11 @@
-let array = [];
-let array2 = [];
-let array3 = [];
+let arrayPendientes = [];
+
+let arrayRealizando = [];
+let arrayRealizadas = [];
 		
-const UL = document.getElementById("pendientes");
-const UL2 = document.getElementById("realizando");
-const UL3 = document.getElementById("realizadas");
+const PENDIENTES = document.getElementById("pendientes");
+const REALIZANDO = document.getElementById("realizando");
+const REALIZADAS = document.getElementById("realizadas");
 const BUTTON = document.getElementById("button-add");
 const CLOSE = document.getElementById("modal");
 
@@ -23,86 +24,87 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 
 	function valor(e) {
 		const INPUT = document.getElementById("input-add").value;
-			array.push(INPUT);
-				UL.innerHTML = "";
+			if (INPUT.length >= 21) {
+				CLOSE.innerHTML = modal;
 
-				for (let i = 0; i < array.length ; i++) {
-						document.getElementById("pendientes").innerHTML += "<li class='li-array'>" + array[i] 
+			}else if (/\S/.test(INPUT)) {
+				arrayPendientes.push(INPUT);
+						
+				PENDIENTES.innerHTML = "";
+
+				for (let i = 0; i < arrayPendientes.length ; i++) {
+						document.getElementById("pendientes").innerHTML += "<li class='li-array'>" + arrayPendientes[i] 
 						+ "</li>";
 						
-						if (INPUT === "" || INPUT.length >= 21) {
-							document.getElementById("modal").innerHTML = modal;
-							array.pop(INPUT);
-							UL.innerHTML = "";
+								arrayPendientes[i];
 							
-						}
-								array[i];
+				
 
-						UL.addEventListener('click', añade);
+						PENDIENTES.addEventListener('click', anadePENDIENTES);
 
-						function añade(e) {
-							array2.push(array[i]);
-							UL2.innerHTML = "";
+						function anadePENDIENTES(e) {
+							arrayRealizando.push(arrayPendientes[i]);
+							PENDIENTES.innerHTML = "";
 
-							array.pop(array2[i]);
+							arrayPendientes.pop(arrayRealizando[i]);
 
-							for (let i = 0; i < array2.length; i++) {
+							for (let i = 0; i < arrayRealizando.length; i++) {
 
-								UL.innerHTML = "";
-								UL2.innerHTML = "";
+								PENDIENTES.innerHTML = "";
+								REALIZANDO.innerHTML = "";
 
-								UL2.innerHTML += "<li class='li-array'>" + array2[i] + "</li>";
+								REALIZANDO.innerHTML += "<li class='li-array'>" + arrayRealizando[i] + "</li>";
 
-								array2[i];
+								arrayRealizando[i];
 							
 							}
 						}
 						
-						UL2.addEventListener('click', añade2);
+						REALIZANDO.addEventListener('click', anadeREALIZANDO);
 
-						function añade2(e) {
-							array3.push(array2[i]);
-							UL3.innerHTML = "";
+						function anadeREALIZANDO(e) {
+							arrayRealizadas.push(arrayRealizando[i]);
+							REALIZADAS.innerHTML = "";
 							
 
 
-							for (let i = 0; i < array3.length; i++) {
+							for (let i = 0; i < arrayRealizadas.length; i++) {
 								
-								UL2.innerHTML = "";
-								UL3.innerHTML = "";
+								REALIZANDO.innerHTML = "";
+								REALIZADAS.innerHTML = "";
 
-								UL3.innerHTML += "<li class='li-array'>" + array3[i] + "</li>";
+								REALIZADAS.innerHTML += "<li class='li-array'>" + arrayRealizadas[i] + "</li>";
 
-								array3[i];
+								arrayRealizadas[i];
 							}
 
-							UL3.addEventListener('click', borra);
+							REALIZADAS.addEventListener('click', borra);
 
 							function borra(e) {
-								for (let i = 0; i < array3.length; i++) {
-									array3.shift(array3[i]);
+								for (let i = 0; i < arrayRealizadas.length; i++) {
+									arrayRealizadas.shift(arrayRealizadas[i]);
 										
-										UL3.innerHTML = "<label style='text-align: center; display:block; color:white;background: red; padding:10px;'>"
+										REALIZADAS.innerHTML = "<label style='text-align: center; display:block; color:white;background: red; padding:10px;'>"
 										+ "Borrado" + "</label>";
 									
 									setTimeout(function(){
-										UL3.innerHTML = "";
-									},1000);
+										REALIZADAS.innerHTML = "";
+									},600);
 
 
-									array3[i];
+									arrayRealizadas[i];
 
 								}
 							}
 						}
 					}
+				}else{
+					CLOSE.innerHTML = modal;
 				}
+			}
 
 	CLOSE.addEventListener('click', close);
 
 	function close(e) {
 		CLOSE.innerHTML = modal2;
 	}
-
-	
-				
