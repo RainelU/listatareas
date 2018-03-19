@@ -22,14 +22,14 @@
     list-style: none;
     padding: 5px 0px;
     text-align: center; }
-  #realizando .li-array {
+  #realizando .li-realizando {
     font-size: 20px;
     padding-left: 30px;
     font-family: 'monospace';
     font-weight: bold;
     cursor: pointer;
     display: flex; }
-  #realizando .li-array:hover {
+  #realizando .li-realizando:hover {
     background-color: #80808069; }
 
 #realizadas {
@@ -39,14 +39,14 @@
     list-style: none;
     padding: 5px 0px;
     text-align: center; }
-  #realizadas .li-array {
+  #realizadas .li-realizadas {
     font-size: 20px;
     padding-left: 30px;
     font-family: 'monospace';
     font-weight: bold;
     cursor: pointer;
     display: flex; }
-  #realizadas .li-array:hover {
+  #realizadas .li-realizadas:hover {
     background-color: #80808069; }
 
 .modal .modal-add {

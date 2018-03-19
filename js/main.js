@@ -1,5 +1,6 @@
 let arrayPendientes = [];
-
+let li = document.getElementsByClassName("li-array");
+let liRealizando = document.getElementsByClassName("li-realizando");
 let arrayRealizando = [];
 let arrayRealizadas = [];
 		
@@ -30,10 +31,10 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 			}else if (/\S/.test(INPUT)) {
 				arrayPendientes.push(INPUT);
 						
-				PENDIENTES.innerHTML = "";
+				PENDIENTES.innerText = "";
 
 				for (let i = 0; i < arrayPendientes.length ; i++) {
-						document.getElementById("pendientes").innerHTML += "<li class='li-array'>" + arrayPendientes[i] 
+						document.getElementById("pendientes").innerHTML += "<li name='li' class='li-array'>" + arrayPendientes[i] 
 						+ "</li>";
 						
 								arrayPendientes[i];
@@ -43,17 +44,18 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 						PENDIENTES.addEventListener('click', anadePENDIENTES);
 
 						function anadePENDIENTES(e) {
+							if (e.target && e.target.className === 'li-array') {
 							arrayRealizando.push(arrayPendientes[i]);
-							PENDIENTES.innerHTML = "";
+							PENDIENTES.innerText = "";
 
 							arrayPendientes.pop(arrayRealizando[i]);
 
 							for (let i = 0; i < arrayRealizando.length; i++) {
 
-								PENDIENTES.innerHTML = "";
-								REALIZANDO.innerHTML = "";
+								PENDIENTES.innerText = "";
+								REALIZANDO.innerText = "";
 
-								REALIZANDO.innerHTML += "<li class='li-array'>" + arrayRealizando[i] + "</li>";
+								REALIZANDO.innerHTML += "<li class='li-realizando'>" + arrayRealizando[i] + "</li>";
 
 								arrayRealizando[i];
 							
@@ -63,20 +65,23 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 						REALIZANDO.addEventListener('click', anadeREALIZANDO);
 
 						function anadeREALIZANDO(e) {
+							if (e.target && e.target.className === 'li-realizando') {
 							arrayRealizadas.push(arrayRealizando[i]);
-							REALIZADAS.innerHTML = "";
+							REALIZADAS.innerText = "";
 							
-
+							console.log(e);
+							console.log(this);
 
 							for (let i = 0; i < arrayRealizadas.length; i++) {
 								
-								REALIZANDO.innerHTML = "";
-								REALIZADAS.innerHTML = "";
+								REALIZANDO.innerText = "";
+								REALIZADAS.innerText = "";
 
-								REALIZADAS.innerHTML += "<li class='li-array'>" + arrayRealizadas[i] + "</li>";
+								REALIZADAS.innerHTML += "<li class='li-realizadas'>" + arrayRealizadas[i] + "</li>";
 
 								arrayRealizadas[i];
 							}
+						}
 
 							REALIZADAS.addEventListener('click', borra);
 
@@ -88,7 +93,7 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 										+ "Borrado" + "</label>";
 									
 									setTimeout(function(){
-										REALIZADAS.innerHTML = "";
+										REALIZADAS.innerText = "";
 									},600);
 
 
@@ -98,10 +103,11 @@ let modal2 = "<div>" + "<div class='modal-add' style='display:none;'>" + "<div c
 							}
 						}
 					}
-				}else{
+				}
+			}else{
 					CLOSE.innerHTML = modal;
 				}
-			}
+		}
 
 	CLOSE.addEventListener('click', close);
 
