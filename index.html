@@ -6,10 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="css/import.css">
 </head>
 <body>
-	<div class="contenedor">
+	<div class="">
 		<div class="add">
-			<label class="label-add">Ingrese una tarea a realizar</label>
-			<input type="text" name="text" class="input-add" id="input-add" placeholder="Ingrese una tarea..">
+			<label class="label-add">Ingrese una tarea (1 - 20 dígitos)</label>
+			<input type="text" name="text" class="input-add"  id="input-add" placeholder="Ingrese una tarea..">
 			<button class="button-add" id="button-add">Create</button>
 		</div>
 	</div>
@@ -19,20 +19,31 @@
 			<div class="div1">
 				<h3>Pendientes</h3>
 				<ul id="pendientes">
-
 				</ul>
 			</div>
 			<div class="div2">
 				<h3>Realizando</h3>
-				<ul>
-
+				<ul id="realizando">
 				</ul>
 			</div>
 			<div class="div3">
 				<h3>Realizadas</h3>
-					<ul>
-						
-					</ul>
+				<ul id="realizadas">		
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal" id="modal">
+		<div class="modal-add" id="modal-add">
+			<div class="modal-o">
+				<h2>No puedes ejecutar el INPUT 
+				<h2> a menos que sea de 1 a 20 dígitos...</h2>
+				<h2> Ingresalo o no podrás acceder y añadir tareas.</h2>
+				</h2>
+				<button type="button" id="buttonmodal" class="button" data-dismiss="modal" aria-label="Close">Close
+                    <span aria-hidden="true">&times;</span>
+                </button>
 			</div>
 		</div>
 	</div>

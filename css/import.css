@@ -25,30 +25,43 @@
     padding: 14px 0px;
     font-size: 15px;
     margin: 0% 20%; }
-  .add .button-add:hover {
-    border-radius: 2px;
-    border: 2px solid #dc3545;
-    padding: 14px 0px;
-    font-size: 15px; }
 
 .contenedor .contenedor-son {
   display: grid;
-  grid-template-columns: auto auto auto; }
+  grid-template-columns: auto auto auto;
+  font-size: 30px;
+  font-family: 'Font Awesome 5 Free';
+  padding: 10px 50px; }
   .contenedor .contenedor-son .div1 {
-    background-color: red; }
+    background-color: #ea0b0b;
+    padding: 10px 30px 0px 30px;
+    border-radius: 10px; }
   .contenedor .contenedor-son .div2 {
-    background-color: orange; }
+    background-color: #fff900;
+    padding: 10px 30px 0px 30px;
+    border-radius: 10px; }
   .contenedor .contenedor-son .div3 {
-    background-color: lightgreen; }
+    background-color: blue;
+    padding: 10px 30px 0px 30px;
+    border-radius: 10px; }
   .contenedor .contenedor-son .div1 h3 {
+    border-bottom: 1px solid white;
     margin-top: 10px;
-    text-align: center; }
+    text-align: center;
+    color: white;
+    padding: 0px 0px 10px 0px; }
   .contenedor .contenedor-son .div2 h3 {
+    border-bottom: 1px solid black;
     margin-top: 10px;
-    text-align: center; }
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0px 0px 10px 0px; }
   .contenedor .contenedor-son .div3 h3 {
+    border-bottom: 1px solid white;
     margin-top: 10px;
-    text-align: center; }
+    text-align: center;
+    color: white;
+    padding: 0px 0px 10px 0px; }
 
 * {
   padding: 0;
@@ -59,5 +72,80 @@ body {
 
 html {
   width: 100%; }
+
+#pendientes {
+  padding: 20px 0px;
+  color: white; }
+  #pendientes li {
+    list-style: none;
+    padding: 5px 0px; }
+  #pendientes .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row; }
+  #pendientes .li-array:hover {
+    background-color: #80808069; }
+
+#realizando {
+  padding: 10px 0px;
+  color: black; }
+  #realizando li {
+    list-style: none;
+    padding: 5px 0px;
+    text-align: center; }
+  #realizando .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; }
+  #realizando .li-array:hover {
+    background-color: #80808069; }
+
+#realizadas {
+  padding: 20px 0px;
+  color: white; }
+  #realizadas li {
+    list-style: none;
+    padding: 5px 0px;
+    text-align: center; }
+  #realizadas .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; }
+  #realizadas .li-array:hover {
+    background-color: #80808069; }
+
+.modal .modal-add {
+  background-color: #000000d4;
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  padding: 10% 40%;
+  left: 0%; }
+  .modal .modal-add .modal-o {
+    padding: 50px;
+    background-color: black;
+    color: red; }
+  .modal .modal-add h2 {
+    padding-bottom: 5px; }
+  .modal .modal-add .button {
+    padding: 10px 100px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    border: none;
+    position: relative;
+    border-radius: 3px; }
+  .modal .modal-add .button:not(:disabled):not(.disabled) {
+    cursor: pointer; }
 
 /*# sourceMappingURL=import.css.map */

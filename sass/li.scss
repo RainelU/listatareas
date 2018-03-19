@@ -1,0 +1,110 @@
+#pendientes{ 
+	padding: 20px 0px;
+	color: white;
+		
+	li{
+		list-style: none;
+		padding: 5px 0px;
+	}
+
+	.li-array{
+		font-size: 20px;
+		padding-left: 30px;
+		font-family: 'monospace';
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.li-array:hover{
+		background-color: #80808069;
+	}
+	
+}
+
+#realizando{ 
+	padding: 10px 0px;
+	color: black;
+		
+	li{
+		list-style: none;
+		padding: 5px 0px;
+		text-align: center;
+	}
+
+	.li-array{
+		font-size: 20px;
+		padding-left: 30px;
+		font-family: 'monospace';
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+	}
+	
+	.li-array:hover{
+		background-color: #80808069;
+	}
+	
+}
+
+#realizadas{ 
+	padding: 20px 0px;
+	color: white;
+		
+	li{
+		list-style: none;
+		padding: 5px 0px;
+		text-align: center;
+	}
+
+	.li-array{
+		font-size: 20px;
+		padding-left: 30px;
+		font-family: 'monospace';
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+	}
+	
+	.li-array:hover{
+		background-color: #80808069;
+	}
+	
+}
+
+.modal{
+	.modal-add{
+
+		background-color: #000000d4;
+		z-index: 1;
+		position: absolute;
+		top: 0%;
+		padding: 10% 40%;
+		left: 0%;
+	
+	.modal-o{
+		padding: 50px;
+		background-color: black;
+		color: red;
+	}
+
+	h2{
+		padding-bottom: 5px;
+	}
+
+	.button{
+		padding: 10px 100px;
+		background-color: red;
+		color: white;
+		font-size: 15px;
+		border: none;
+		position: relative;
+		border-radius: 3px;
+	}
+
+	.button:not(:disabled):not(.disabled) {
+    cursor: pointer;
+	}
+}
+}

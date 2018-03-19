@@ -1,0 +1,76 @@
+#pendientes {
+  padding: 20px 0px;
+  color: white; }
+  #pendientes li {
+    list-style: none;
+    padding: 5px 0px; }
+  #pendientes .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row; }
+  #pendientes .li-array:hover {
+    background-color: #80808069; }
+
+#realizando {
+  padding: 10px 0px;
+  color: black; }
+  #realizando li {
+    list-style: none;
+    padding: 5px 0px;
+    text-align: center; }
+  #realizando .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; }
+  #realizando .li-array:hover {
+    background-color: #80808069; }
+
+#realizadas {
+  padding: 20px 0px;
+  color: white; }
+  #realizadas li {
+    list-style: none;
+    padding: 5px 0px;
+    text-align: center; }
+  #realizadas .li-array {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: 'monospace';
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; }
+  #realizadas .li-array:hover {
+    background-color: #80808069; }
+
+.modal .modal-add {
+  background-color: #000000d4;
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  padding: 10% 40%;
+  left: 0%; }
+  .modal .modal-add .modal-o {
+    padding: 50px;
+    background-color: black;
+    color: red; }
+  .modal .modal-add h2 {
+    padding-bottom: 5px; }
+  .modal .modal-add .button {
+    padding: 10px 100px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    border: none;
+    position: relative;
+    border-radius: 3px; }
+  .modal .modal-add .button:not(:disabled):not(.disabled) {
+    cursor: pointer; }
+
+/*# sourceMappingURL=li.css.map */

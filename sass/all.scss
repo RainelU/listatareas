@@ -31,43 +31,53 @@
 		font-size: 15px;
 		margin: 0% 20%;
 	}
-
-	.button-add:hover{
-		border-radius: 2px;
-		border: 2px solid #dc3545;
-		padding: 14px 0px;
-		font-size: 15px;
-	}
 }
 
 .contenedor{
 	.contenedor-son{
 		display: grid;
 		grid-template-columns: auto auto auto;
-		
+		font-size: 30px;
+		font-family: 'Font Awesome 5 Free';
+		padding: 10px 50px;
 		.div1{
-			background-color: red;
+			background-color: #ea0b0b;
+			padding: 10px 30px 0px 30px;
+			border-radius: 10px;
 		}
 		.div2{
-			background-color: orange;
+			background-color: #fff900;
+			padding: 10px 30px 0px 30px;
+			border-radius: 10px;
 		}
 		.div3{
-			background-color: lightgreen;
+			background-color: blue;
+			padding: 10px 30px 0px 30px;
+			border-radius: 10px;
 		}
 
 		.div1 h3{
+			border-bottom: 1px solid white;
 			margin-top: 10px;
 			text-align: center;
+			color: white;
+			padding: 0px 0px 10px 0px;
 		}
 
 		.div2 h3{
+			border-bottom: 1px solid black;
 			margin-top: 10px;
+			margin-bottom: 10px;
 			text-align: center;
+			padding: 0px 0px 10px 0px;
 		}
 
 		.div3 h3{
+			border-bottom: 1px solid white;
 			margin-top: 10px;
 			text-align: center;
+			color: white;
+			padding: 0px 0px 10px 0px;
 		}
 	}
 }
